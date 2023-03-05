@@ -1,0 +1,16 @@
+const http = require('http');
+
+// Creamos el servidor
+const server = http.createServer((req, res) => {
+  // Manejamos la solicitud
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hola mundo!');
+});
+
+// Asignamos el puerto y dirección al servidor
+const port = 3000;
+const host = 'localhost';
+server.listen(port, host, () => {
+  console.log(`Servidor escuchando en http://${host}:${port}`);
+});

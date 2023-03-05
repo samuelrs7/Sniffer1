@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Prueba Web Server G1</title>
+    <style>
+        /* Definimos un estilo para la clase 'mi-parrafo' */
+        .mi-parrafo {
+          color: blue; /* Color del texto */
+          font-size: 30px; /* Tamaño de la fuente */
+          margin-top: 50px; /* Margen superior */
+          text-align: left; /* Alineación del texto */
+        }
+      </style>
+  </head>
+  <body>
+    <h1>Prueba Web Server G1</h1>
+    <div id="datos"></div>
+    
+    <script src="datos.js"></script>
+    
+     <p class="mi-parrafo"> Latitud </p>
+     <script>
+        for (let i = 0; i < datos.length; i++) {
+          document.write(`<li> ${datos[datos.length-3]} </li>`);
+          i=datos.length;
+        }
+      </script>
+
+     <p class="mi-parrafo"> Longitud </p>
+     <script>
+        for (let i = 0; i < datos.length; i++) {
+          document.write(`<li> ${datos[datos.length-2]} </li>`);
+          i=datos.length;
+        }
+      </script>
+
+     <p class="mi-parrafo"> Timestamp </p>
+     <script>
+        for (let i = 0; i < datos.length; i++) {
+          document.write(`<li> ${datos[datos.length-1]} </li>`);
+          i=datos.length;
+        }
+      </script>
+
+  </body>
+</html>
